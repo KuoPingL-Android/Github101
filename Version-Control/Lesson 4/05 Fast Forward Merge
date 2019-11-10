@@ -1,0 +1,38 @@
+If git pull == git fetch + git merge
+then why didn't hasn't our previous pulls generated merge commits
+like 04 did ?
+
+Answer : Fast Forward Merges.
+
+This occur when two commits to be merged one is an
+>>>>>>>>>>>>>>>>>>>>>>
+ANCESTOR of the other.
+<<<<<<<<<<<<<<<<<<<<<<
+Meaning one is reachable by the other
+
+============================
+Example :
+HEAD <- a <- b
+
+a is ancestor of b.
+
+----------------------------------
+when merging a and b, you get :
+HEAD <- (previous) <- b (master)
+                   <- a (origin/master)
+
+In usually case, merge commits are generated to keep track
+of all the commits that play a part to get to this new state.
+
+However, in this case, the commits that play a part are
+(previous) and b(master).
+
+b(master) already contains (previous)'s history,
+there is no extra reason to add a (origin/master).
+
+So instead of making a new commit, the label is updated and
+points it to b(master).
+
+------------------------------------
+Result :
+HEAD <- (previous) <- a,b (master, orign /master)
