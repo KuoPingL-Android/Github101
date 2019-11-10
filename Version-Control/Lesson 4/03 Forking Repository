@@ -1,0 +1,28 @@
+Forking Repository
+
+============================
+Tough way
+
+Let's say, Larry has a repository that he is willing to share with
+Caroline and Sarah.
+
+1.
+git clone larry_remote <~ to Caroline's origin
+
+2.
+git push caroline_origin <~ to shared master
+
+3.
+git clone shared_remote <~ to Sarah's origin
+===============================
+
+
+===============================
+Forking
+- with a single click
+- is just like cloning but on Github's side of machine.
+
+
+Side Effects :
+- Github keeping track on NUMBER of forking, BY WHOM forking is done,
+  also it all LINKs back to the original
