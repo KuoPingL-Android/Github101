@@ -1,0 +1,20 @@
+
+WHAT IS REPOSITORY?
+When working on projects, there might be files that you want to track together.
+
+Git calls this collection of files REPOSITORY.
+
+Repository == Set<Files that you wish to track together>
+
+
+When Commiting :
+Git will save a version of every files in the repository.
+
+How to create a REPOSITORY with multiple files?
+Simply commit them togehter.
+Then, when you commit one of the files in the repository,
+all other files will be tracked as well.
+
+Example :
+1st commit : game.js, index.html, index.css
+2nd commit : game.js (index.html, index.css) <- these are from previous version.

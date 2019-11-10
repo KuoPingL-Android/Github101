@@ -1,0 +1,52 @@
+Astroids.js
+
+1.
+When we fixed the bug, and do git status.
+We should see that :
+  modified : game.js
+
+2.
+When we also modified index.html
+Let's take a look at what is happening in
+Working Directory, Staging Area and Repository
+
+- Repository :
+  the repository contains several commits
+  each commit contains several files
+
+  In the most recent commit :
+  - game.js
+  - index.html
+
+- Staging Area :
+  the staging area is a copy of the most recent commit
+  until changes are ADD to it.
+
+- Working Directory :
+  working directory also contains the same files, but modified:
+  - game.js *
+  - index.html *
+
+Comparision GIT DIFF :
+GIT DIFF <old id> <new id>
+You can compare commits by id,
+but you can't compare the ones in Stage Area and Work Directory
+
+GIT DIFF
+However, you can simply call git diff with no argument :
+
+You will see the differences from both files
+
+When you add game.js, git diff will only show index.html changes,
+since Stage Area is now the same as working Directory.
+
+game.js will disappear when committed.
+
+How about comparing Stage Area and Latest Commit ?
+GIT DIFF --STAGED
+
+3.
+Now I want to get rid of the changes in index.html :
+git reset --hard
+ - this will discard any changes in either the working directory
+    or the staging area 

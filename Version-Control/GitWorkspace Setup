@@ -1,0 +1,75 @@
+GIT WORKSPACE ?
+move file to home directory
+1. (get to home directory)
+cd ~
+
+2. move
+mv /Users/jimmy/Desktop/Version-Control/Mac\ GitWorkspace/git-completion.bash git-completion.bash
+mv /Users/jimmy/Desktop/Version-Control/Mac\ GitWorkspace/git-prompt.sh git-prompt.sh
+mv /Users/jimmy/Desktop/Version-Control/Mac\ GitWorkspace/bash_profile_course .bash_profile
+mv <Source Directory> <Destination Directory>
+
+3. check .bash_profile
+vim .bash_profile
+
+Last login: Thu Nov  7 13:47:14 on ttys004
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Jimmyde-MBP:~ jimmy$ cd ~
+Jimmyde-MBP:~ jimmy$ mv /Users/jimmy/Desktop/Version-Control/Mac\ GitWorkspace/git-completion.bash git-completion.bash
+Jimmyde-MBP:~ jimmy$ mv /Users/jimmy/Desktop/Version-Control/Mac\ GitWorkspace/git-prompt.sh git-prompt.sh
+Jimmyde-MBP:~ jimmy$ mv /Users/jimmy/Desktop/Version-Control/Mac\ GitWorkspace/bash_profile_course .bash_profile
+Jimmyde-MBP:~ jimmy$ vim .bash_profile
+
+Last login: Thu Nov  7 13:47:14 on ttys004
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Jimmyde-MBP:~ jimmy$ cd ~
+Jimmyde-MBP:~ jimmy$ mv /Users/jimmy/Desktop/Version-Control/Mac\ GitWorkspace/git-completion.bash git-completion.bash
+Jimmyde-MBP:~ jimmy$ mv /Users/jimmy/Desktop/Version-Control/Mac\ GitWorkspace/git-prompt.sh git-prompt.sh
+Jimmyde-MBP:~ jimmy$ mv /Users/jimmy/Desktop/Version-Control/Mac\ GitWorkspace/bash_profile_course .bash_profile
+Jimmyde-MBP:~ jimmy$ vim .bash_profile
+
+
+# Enable tab completion
+# Loads one of the files downloaded earlier
+# to enable tap completion
+source ~/git-completion.bash
+
+# colors!
+blue="\[\033[0;34m\]"
+purple="\[\033[0;35m\]"
+reset="\[\033[0m\]"
+
+# Change command prompt
+# Loads the other file
+# And it is neccessary for the git related stuff
+# like commit IDs to show up in your prompt
+source ~/git-prompt.sh
+
+# This line make sure the asterisk will be shown in your
+# prompt if you make changes in a git repository.
+export GIT_PS1_SHOWDIRTYSTATE=1
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds git-related stuff
+# '\W' adds the name of the current directory
+
+# This line defines what the prompt will be
+# user name -> Purple  ($purple\u)
+# The commit you have checked out or other git related stuff in green
+# The directory URN followed by a dollar sign in blue
+# Any text after that would be default ($reset)
+export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
+-- 插入 --                                                    29,48        底端
+=
+
+HOME :
+CMD + SHIFT + H
+
+
+To understand how bash works
+http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html

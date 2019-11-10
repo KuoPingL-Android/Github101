@@ -1,0 +1,47 @@
+1. Make file.txt with content by "touch file.txt"
+
+A
+B
+C
+D
+E
+F
+
+2. copy file.txt to "updated.txt"
+https://askubuntu.com/a/745094
+cp file.txt updated.txt
+
+3. alternate updated.txt and check diff -u file.txt updated.txt
+
+Tracking versions using Git
+---------------
+What if instead of saving a new version of the file named updated.txt,
+you had been using Git to track your changes to file.txt?
+On the next screen, select any of the statements that would be true.
+
+Check all statements that would be true if you tracked changes using Git.
+
+You would be able to see the difference between the two versions,
+but you would no longer be able to directly access the old version.
+
+F. You could still access the old version of the file by checking out the commit associated with that version. Then the recipe would temporarily revert to its state at the time that commit was made.
+
+
+Using git diff to compare the two versions would show the
+same changes as diff -u did in the previous exercise.
+
+T. diff -u and git diff show very similar outputs. Even if the exact format was slightly different, the actual changes indicated would be the same.
+
+
+The name of the file would change when you saved a second version in Git.
+
+F. The name of the file would remain the same.
+Git does not rename files when you save a new commit.
+Instead, Git uses the commit IDs to refer to different versions of the files,
+and you can use git checkout to access old versions of your files.
+
+
+To save two versions of the file, you would create two commits.
+
+T. Commits are Git's way of saving versions,
+so to save two different versions, you would create two commits.

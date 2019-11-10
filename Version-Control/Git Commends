@@ -1,0 +1,54 @@
+git log
+git log --stat : gives some statistics about
+                 which files have been changed in each commit.
+git log --graph --oneline <branch1> <branch2> ...
+  --graph <~ visualize
+  --oneline <~ easier to see
+
+git log -n 1
+  -n 1<~ number of commit (in this case , 1)
+
+
+q : quit log
+git --version
+git init
+
+git status
+git clone <git.git>
+
+git checkout <id>
+
+git diff <~ compare Stage vs Work Directory
+git diff --staged <~ compare Stage vs Repository (latest commit)
+git diff <new id> <old id>
+
+git show ... <~ Show differences between the git committed and its parent
+                      without actually knowing who's the parent.
+
+RESETs :
+git reset --hard <~ discard changes in both Working Directory and Staging Area
+
+
+MERGE :
+git merge branch_of_interest (currently at the other branch of interest)
+git merge branch1 branch2 (marge current branch with branch1 and branch2)
+
+Branch :
+git branch -D master // Delete branch master
+
+Compund functions :
+git checkout -b new_branch_name
+^
+performing 2 commands at once : git checkout , git branch
+
+
+REMOTE :
+git remote <~ check the current remote
+git remote add <Any name>
+git remote -v <~ verbose, means that git remote will output more info
+
+
+PUSH :
+git push <remote> <local>
+- remote <~ remote I want to send changes to
+- local  <~ the name of the local branch that I'd like to push>

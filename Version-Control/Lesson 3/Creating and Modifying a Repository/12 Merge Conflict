@@ -1,0 +1,44 @@
+When having a Merge Conflict, you will see a structure like this :
+<<<<<<<<<<<<<<<<<<<<<<< HEAD
+CODE 1 <My Code>
+
+|||| merged common ancestors
+
+CODE 2 <Origin Code>
+
+============
+other CODE in MASTER <Someone else's code>
+<<<<<<<<<<<<<<<<<<<<< master
+
+
+
+====================================
+git status
+
+On branch easy-mode
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+Unmerged paths:
+  (use "git add <file> ..." to mark resolution)
+
+        both modified :   game.js <~ both because
+                                      both BRANCHES modified the file and
+                                      there was a conflict
+
+no changes added to commit ...
+
+After resolving the conflict :
+git add game.js
+
+git status
+
+On branch easy-mode
+All conflicts are fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+changes to be committed :
+
+      modified: game.js
+
+
+git commit

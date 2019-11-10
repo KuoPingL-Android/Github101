@@ -1,0 +1,85 @@
+From the previous lesson, we worked on Astroids repository.
+It looks like a directory, but the main difference is that :
+- Git repositories store a bunch of metadata
+  about the history of the repository since it was created.
+  ====> .git
+TERMINAL $ ls -a
+this will show all files, including the hidden files.
+
+
+ls -a
+.           cake-recipe.txt         frosting-recipe.txt
+..          chili-recipe.txt
+
+git init
+.           .git                    cake-recipe.txt
+..          chili-recipe.txt        frosting-recipe.txt
+
+
+git log
+1. if you just init
+fatal: your current branch 'master' does not have any commits yet
+
+2.
+fatal : bad default revision "HEAD" <== HEAD is the git's name for current commit
+^
+This is telling us that we cannot see my commit history,
+because there aren't any.
+
+========================
+master vs HEAD
+The simple answer is that
+
+- HEAD is a pointer/label to the most recent commit of the branch
+  you are currently on.
+
+- master is the default branch created when you initialized
+  a git repository (e.g. git init ).
+
+NOTE : You can delete the master branch (e.g. git branch -D master ).
+       You cannot delete the HEAD pointer
+=====================================================================
+
+
+git status
+shows which files have changed since the last commit.
+
+1.
+If your file has nothing or up to date
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+2.
+If you have added new file.
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	cake_recipe.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+git add cake_recipe.txt
+then
+git log
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   cake_recipe.txt
+
+
+
+
+
+
+
+|
+\
+\
+\

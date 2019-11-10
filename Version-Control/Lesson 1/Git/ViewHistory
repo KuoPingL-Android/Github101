@@ -1,0 +1,55 @@
+git log
+
+The log will be shown with this format
+commit : <id>
+Author : <Author>
+Date : <Date>
+Message : <Message>
+
+git diff <id 1> <id 2>
+
+If you were to put "git diff" on the Concept Map :
+Concept Map :
+              Version control
+
+    Manual  Dropbox  Google Wiki Git SVN
+    save
+
+                                commit
+                                diff <Operate on Relationship>
+
+
+which existing concept(s) would you directly connect to ?
+- commit
+
+
+How Often to Commit
+ A good rule of thumb is to make one commit per logical change.
+
+ For example, if you fixed a typo, then fixed a bug in a separate part
+ of the file, you should use one commit for each change
+ since they are logically separate.
+
+Commit Size Quiz
+   You commit all the changes required to add a new feature,
+   which you’ve been working on for a week.
+   You haven’t committed since you started working on it.
+
+    - too big
+
+
+    You find three typos in your README. You fix and commit the first.
+    - too small
+
+    You commit all the changes required to add a new feature,
+    which you’ve been working on for an hour.
+    - just right
+
+    You fix two small bugs in different functions and commit them both at once.
+    - too big
+
+
+Reflection :
+What do you think are the pros and cons of manually choosing
+when to create a commit, like you do in Git,
+vs having versions automatically saved, like Google Docs does?

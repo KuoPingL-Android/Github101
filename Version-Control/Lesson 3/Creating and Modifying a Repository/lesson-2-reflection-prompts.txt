@@ -1,0 +1,29 @@
+What happens when you initialize a repository?
+- you created a branch and a reference HEAD.
+
+Why do you need to do it?
+- So you can add and commit
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+- repository contains .git folder,
+  which holds the reference of the git repository.
+  It allows you to add files to staging area and commit repository.
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+- git status
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+- If you have new features, then new branches might be a good option
+
+How do the diagrams help you visualize the branch structure?
+- They allow us to see how they are related
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+- 
+
+What are the pros and cons of Git's automatic merging vs. always doing merges
+manually?

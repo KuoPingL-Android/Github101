@@ -1,0 +1,36 @@
+When you are collaborating with others, you can't easily work on a
+separate features simultaneously.
+
+A common workflow for people working together is
+- create a new branch whenever working on new features or fixing bugs
+
+Once a bug is fixed,
+author can either
+- Update Master to also point to the tip of the new branch.
+- or if there are changes to the master at the mean time,
+  using GIT MERGE
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Examples:
+Astroids : feature : Get coin when hit a ship
+
+git checkout coins
+  Branch coins set up to track remote branch coins from origin
+  Switched to a new branch coins
+
+  "remote branch" <~ means I didn't create it myself.
+
+-> However, the game does not have color. WHY ?
+
+git log
+  This shows the "coins" were created before "color" was added.
+
+git log --graph --oneline master coins
+  See the logs from master and coins
+
+... <~ ellipses
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+
+So how does git log knows what commits to show ?
+Each commit knows its parent (previous commit). 
+It stores a reference to the commit that was checked out when it was made.

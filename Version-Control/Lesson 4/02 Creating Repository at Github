@@ -1,0 +1,27 @@
+Now, we need to create a repository at Github
+
+1.
+Add a Repository at your Github, don't initialize it with README.md or license.
+
+2.
+Go to your directory
+
+3.
+git init
+
+4.
+git remote add origin <url>
+origin <~ this can be any name within this repository
+          to refer to the repository on Github
+          If you only have 1 remote, it's standard to name it origin.
+
+git remote -v <~ verbose, means that git remote will output more info,
+                 that is it will be more verbose.
+
+5.
+git push <remote> <local>
+- remote <~ remote I want to send changes to
+- local  <~ the name of the local branch that I'd like to push>
+
+
+So in this case : git push origin master

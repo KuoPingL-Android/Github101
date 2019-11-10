@@ -1,0 +1,14 @@
+In order to get the Detach "HEAD" message,
+you need to checkout a COMMIT ... not a branch.
+
+HEAD <~ means current commit.
+
+=======================
+If you want to create a new branch to retain commits you create, use
+git checkout -b new_branch_name
+
+Running git checkout -b new_branch_name is like running
+2 commands at the same time :
+
+~ git branch new_branch_name
+~ git checkout new_branch_name

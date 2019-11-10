@@ -1,0 +1,21 @@
+Tracking Across Files
+Example :
+func A { call B() } in A.file
+func B {//implement} in B.file
+
+if you wish to add an additional argument to func B,
+you will need to change  code in both files.
+
+
+Non-code orientated VCS usually track 1 file at a time.
+Meaning :
+ if you changed both files, they will have separate version saved.
+
+In the following examples, which do you think make more sense
+to track both files simulataneously ?
+- competition style coding : solve the problem in one page
+- html / css
+- photoshop
+- novels with different chapters.
+
+of course b.

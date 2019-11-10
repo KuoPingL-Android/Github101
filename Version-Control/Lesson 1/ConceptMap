@@ -1,0 +1,23 @@
+Concept Map :
+- Version Control
+  - typeof : Manual, Dropbox, Google, Wiki, Git, SVN
+  - partof : Git-> Commits
+
+
+Git :
+ - COMMIT (is part of Git &) is part of REPOSITORY
+  - DIFF operates on commit
+ - REPOSITORY is part of Git
+
+ Commit -> Git
+ now :
+ Commit -> REPOSITORY -> GIT
+
+CLONE :
+ - Since Clone clones the repository, it should operates on repository.
+
+ CLONE -> REPOSITORY
+
+ Log ?
+ Since log shows display the results of all repository/
+ shows you list of commits, it should operates-on commit.

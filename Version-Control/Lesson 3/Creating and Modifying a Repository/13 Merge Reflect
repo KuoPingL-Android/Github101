@@ -1,0 +1,9 @@
+Reflect: Automatic vs. Manual Merging
+Now that you’ve learned when Git will not be able to
+automatically merge branches,
+and what happens when it can’t,
+go add the following question and your
+thoughts on it to your reflections file:
+
+What are the pros and cons of Git’s automatic merging vs.
+always doing merges manually?

@@ -1,0 +1,58 @@
+cd ~                          # change directories to your home directory
+mkdir version-control         # make version-control directory
+cd version-control            # go to version-control directory
+mkdir reflections             # create reflections directory
+cd reflections                # go to reflections directory
+subl lesson_1_reflections.txt
+# launch sublime with file called lesson_1_reflections.txt
+(you can replace subl with another editor here if you prefer a different one)
+
+pwd # print working directory - shows what directory you are in
+ls  # list the files in this director
+
+Mac :
+diff : Difference
+-u : Unified diff format
+
+diff -u <old file> <new file>
+
+when reading the result,
++ means added at the new file
+- means deleted at the new file
+
+Versions :
+- How could having easy access to the entire history of
+  a file make you a more efficient programmer in the long term?
+1. manual copies
+2. Dropbox (saved periodically, you can see the older version for 30 days)
+3. Google Docs
+4. Wiki
+
+
+When would you want your code saved ?
+- Regular intervals
+  = if you easily forget to save, then this might be the choice
+    however, it might not be meaningful.
+- Enough changed
+  = your changes might not be enough to save.
+- Long Paused
+  = you will get some meaningful and some other not so meaningful saves.
+- Manual
+  = fixible, but if you forgot to save, then that's that.
+
+Git : British slang. Unpleasant person
+CVS, SVN, Hg
+
+
+Feature Comparison :
+Any Editor : Manual, Dropbox
+Use Offline: Manual
+Manual Saving : Manual, Wiki, Git, SVN
+
+
+Git Commits:
+- user made check points.
+- building block of git.
+- fix off-by-one bug
+- add cool new feature
+- improve user docs

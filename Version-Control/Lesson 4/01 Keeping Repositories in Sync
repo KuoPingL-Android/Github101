@@ -1,0 +1,38 @@
+Syncing Repositories
+- Involved Syncing between the repository on your computer and the
+  version hosted on Github.
+- When using Github, you need to choose when and how to get the
+  two versions in sync
+- If Github automatically commit, you might end up making things public
+  before they are ready.
+
+So how do you set up a Github ?
+- git clone requires a remote repository to begin with.
+- so we need to prepare a repository on Github.
+
+What kinds of interactions can you have with a remote?
+- push / pull
+- instead of selecting each individual commit,
+  the most common way to send and receive data is by
+  specifying a BRANCH
+
+- so you can PUSH commit from master,
+  since the rest can be reached from master tip,
+  to the remote repository.
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Example :
+Local :
+a3b <- fd2 <- e53 (master)
+           <- 6b4
+
+Remote :
+a3b
+
+If I were to push the master branch, which commits would it push ?
+Answer : fd2 , e53
+
+a3b : Already available on Remote, no point to push.
+6b4 : Not reachable from master branch
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

@@ -1,0 +1,76 @@
+Branching
+
+Straight line :
+- fixing bugs
+- new features
+- update docs
+
+Branching :
+- experimental features
+- different version
+
+==========================
+If you want to fix a bug while working on new branch,
+then you need to go back to the origin branch and commit.
+
+With all the branchings and nodes, it would cause a lot of overhead.
+
+In order to make this easier, git allows you to make LABELs / BRANCHES
+to your commits.
+
+
+=========================
+Main branch : Master
+
+=========================
+Detach "HEAD" :
+This means that you are looking at a commit that was not labeled with a
+branch name.
+
+=========================
+Terminology :
+Tip of that branch : the latest commit at that branch.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Practice : Branching
+Astroids
+git branch easy-mode
+git branch
+  easy-mode
+  * master
+git checkout easy-mode
+  Switched to branch 'easy-mode'
+git branch
+  * easy-mode
+    master
+
+=> Alternate game.js (fragment == 2)
+
+git add game.js <~ add to staging Area
+git commit -m "make astroids split into 2 smaller pieces instead of 3"
+git status
+  On branch easy-mode
+  nothing to commit, working tree clean
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+Reflect: When to Use Branches
+Now that you’ve learned how to create a branch in Git,
+go add the following question and your thoughts on it to your
+reflections file:
+
+What are some situations when branches would be helpful
+in keeping your history organized? How would branches help?
+- branch whenever moving on a new piece of work / difference.
+  Such as working on new features or correcting a bug.
+
+  Compartmentalize the work.
+
+  When working on new feature, if you see a bug, you can go back
+  and fix it via branching.
+
+You may also want to commit your changes to the file.
+When you're ready to move on, click "Next" to hear a perspective from
+an experienced Git user.

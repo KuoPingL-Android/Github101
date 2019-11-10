@@ -1,0 +1,33 @@
+Choosing what changes to commit :
+
+===========================
+Working Directory
+
+- cake.txt
+- frosting.txt
+- chili.txt
+
+===========================
+
+git add "cake.txt" "frosting.txt"
+
+===========================
+Staging Area
+
+- cake.txt
+- frosting.txt
+
+===========================
+
+git commit -m "message"
+
+// Git bundle the entire staging area into a single commit
+  and add that to the repository
+===========================
+Repository
+ -------------------------
+ Commit
+ - cake.txt
+ - frosting.txt
+ -------------------------
+============================
