@@ -26,3 +26,22 @@ Forking
 Side Effects :
 - Github keeping track on NUMBER of forking, BY WHOM forking is done,
   also it all LINKs back to the original
+
+Pros :
+- Easier to suggest changes back to the original repository.
+
+================================
+
+Q :
+Where was your commit presented ?
+Right before you ran git push, where do you think your commit adding
+a new recipe was present ?
+- Local
+
+Similarly now that you have run git push, where do you think this
+commit is present?
+- Local & Fork
+
+NOTE :
+Running git push won't change what shows up in your local git log
+- it will only change what is present on the remote.
