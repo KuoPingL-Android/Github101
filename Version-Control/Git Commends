@@ -27,7 +27,9 @@ git show ... <~ Show differences between the git committed and its parent
 
 RESETs :
 git reset --hard <~ discard changes in both Working Directory and Staging Area
-
+// RESET after git add before commit.
+git reset <filename>
+get reset
 
 MERGE :
 git merge branch_of_interest (currently at the other branch of interest)
