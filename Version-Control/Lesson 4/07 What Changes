@@ -1,0 +1,56 @@
+=============================
+LOCAL
+---------------
+Working Directory : b
+Staging Area : b
+Commit History :
+  a <- b (master)<- c (alt)
+=============================
+v
+v
+v
+v
+=============================
+GitHub
+------------------
+  Commit History
+  a <- b <- d (master)
+         <- c (alt)
+------------------
+=============================
+
+ACTIONS (Assume running with
+local master checkout):
+
+Edit and Save README.md
+  - This will only affect the local directory.
+  Working Directory : e
+
+git add README.md
+  - This changes the staging area
+  Working Directory : e
+  Staging Area : e
+
+git commit
+  - This will create a commit with the Changes
+    from the staging area and update the master
+    branch
+  Commit History :
+    a <- b <- e (master)
+           <- c (alt)
+
+git pull origin master
+  - this will pull the master branch from GitHub
+    and pull it to local branch
+    and merge it to what is currently on master
+  - so the local master is the one that changed
+  Commit History :
+    a <- b <- e <- f (master)
+           <- d <- V
+           <- c (alt)
+
+git push origin master
+  - this will change the github master
+
+git merge alt pull request
+  - this will merge c (alt) to the master branch.
