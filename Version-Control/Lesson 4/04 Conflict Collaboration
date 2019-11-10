@@ -1,0 +1,112 @@
+Conflicting Collaboration
+
+So far, we have only been looking at cases when two repositories are out
+of sync. It has been about 1 repository having commits that the other doesn't.
+
+<<<<<<<<<<<<<<<<<<<<<<<<
+Example :
+local : ac5 <- b3c (master)
+remote : ac5 (master)
+>>>>>>>>>>>>>>>>>>>>>>>>
+
+What if ...
+They both have commits that are reachable from the same branch ?
+What will happen when you pull or push ?
+
+<<<<<<<<<<<<<<<<<<<<<<<<<
+Example :
+local : ac5 <- b3c
+remote : ac5 <- df6
+
+PULL :
+pulling will set your state the same as remote
+
+b3c <~ gone
+
+So what should you do ?
+git fetch origin
+^
+update all the local copies of every branch for the origin remote
+
+then you can use git log and git diff to see the differences on
+both the local and remote repositories.
+
+When you are ready, you can use
+git merge
+
+this is what happen when you do a git pull
+
+>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Simulate Sarah's Changes
+In the Downloadables section,
+there is a file called sarah_changes.sh,
+which contains code to make it look like Sarah
+has modified your fork on GitHub.
+
+To run the code, download the file, then using
+Git Bash or your terminal, cd to the directory where you've saved it.
+
+Then type bash sarah_changes.sh followed by a space,
+followed by the url to your fork.
+
+For example, if Caroline were running the code,
+she would type
+
+bash sarah_changes.sh https://github.com/cbuckey-uda/recipes.git,
+
+but you should use the url for your fork,
+not Caroline's fork.
+
+If you haven't set up password caching,
+then you will be prompted to enter your GitHub username and password.
+
+
+So here's the process :
+1.
+You Fork Larry's code, with the latest commit
+  - "Add chili recipe"
+
+2.
+git clone to your computer :
+"Add Chili Recipe" (origin/master)
+
+3.
+modified "New Recipe"
+
+"Add Chili Recipe" <- "New Recipe" (master)
+^
+(origin/master)
+
+4.
+Sarah modified on GitHub "Remove cumin"
+Her repository :
+
+"Add Chili Recipe" (origin/master) <- "Remove cumin" (master)
+
+5.
+git fetch
+"Add Chili Recipe" <- "New Recipe" (master)
+                   <- "Remove Cumin" (origin/master)
+
+So ANSWERS :
+Before git fetch :
+  your git origin/master should show
+    - Add Chili Recipe
+  your status should be
+    - Ahead
+
+After gif fetch :
+  Your git origin/master should show
+    - Remove Cumin
+  your status should be
+    - out of sync
+
+/////////////////////////
+git diff origin/master master <~ origin/master : fetched branch
+
+|
+|
+|
+|
