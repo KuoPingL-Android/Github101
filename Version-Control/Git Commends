@@ -35,8 +35,9 @@ MERGE :
 git merge branch_of_interest (currently at the other branch of interest)
 git merge branch1 branch2 (marge current branch with branch1 and branch2)
 
-Branch :
+BRANCH :
 git branch -D master // Delete branch master
+git branch -a // Shows branches and what HEAD is pointing at (current branch)
 
 Compund functions :
 git checkout -b new_branch_name
@@ -54,3 +55,15 @@ PUSH :
 git push <remote> <local>
 - remote <~ remote I want to send changes to
 - local  <~ the name of the local branch that I'd like to push>
+
+
+FETCH :
+git fetch <remote ie origin>
+^
+update the local copy of the remote branch
+leaving the actual local version along.
+
+PULL :
+git pull
+^
+the same as git fetch + git merge
