@@ -1,0 +1,73 @@
+Collaborating using GitHub
+Let's say you and Sarah collaborate in a repository.
+
+You have new changes that you want Sarah to check it out before merging
+to the master branch :
+
+a <- b <- c (master)
+       <- new_Idea (different-oil)
+
+You will use a feature in GitHub called "PULL REQUEST"
+that make it easy for Sarah to know what have changed.
+
+=========================
+Your side :
+git check -b different-oil
+git add cake_recipe.txt
+git commit
+git push origin different-oil
+==========================
+
+
+On GitHub
+Check on the Branch different-oil
+You can click on the commit history to see what changes were made.
+
+=========================
+PULL REQUEST (your side)
+on the main page, you can either click "compare & pull request" or
+
+go to different-oil branch and click on "PULL REQUEST"
+
+By default,
+GitHub assumes you want to merge your changes to the Original repository
+(Larry's repository).
+
+You can change it back to your own repository by clicking "EDIT" on the right.
+
+You can now change the BASE FORK to your repository.
+
+Then click on Create PULL REQUEST.
+
+==========================
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<
+PULL REQUEST (Sarah)
+This is asking Sarah to pull Caroline's branch into the MASTER branch.
+
+Here you can either give a comment overall or an inline comment.
+
+If everything is go,
+you can press on the MERGE PULL REQUEST.
+(only go through without a Conflict)
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+===================================================
+Commit merging a pull request
+After running git log -n 1, you should have seen output something like this:
+
+commit bc368511c6406028c77e2631f77c4d22a5da16d0
+Merge: 79fff84 23d1775
+Author: cbuckey
+Date:   Tue Sep 30 18:50:28 2014 -0400
+
+    Merge pull request #1 from cbuckey-uda/different-oil
+
+    Change vegetable oil to canola oil
+
+Notice that the commit message:
+
+    - Indicates that a pull request was merged
+    - Gives the number of the pull request (#1 here)
+    - Gives the branch the pull request was merged from (cbuckey-uda/different-oil here).
+    - Contains the title of the pull request.
