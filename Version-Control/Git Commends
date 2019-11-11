@@ -56,6 +56,7 @@ git push <remote> <local>
 - remote <~ remote I want to send changes to
 - local  <~ the name of the local branch that I'd like to push>
 
+ie git push origin changes
 
 FETCH :
 git fetch <remote ie origin>
